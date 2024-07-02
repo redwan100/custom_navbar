@@ -1,0 +1,65 @@
+import { useEffect, useState } from "react";
+// import { navbarItems } from "../../db";
+import { navbarItems } from "../db";
+import MobileNavbar from "./components/MobileMenu";
+import NavDropDownMenu from "./components/NavDropDownMenu";
+import Navbar from "./components/Navbar";
+
+const App = () => {
+  const [navItems, setNavItems] = useState(navbarItems);
+  const [navLeftSideItems, setNavLeftSideItems] = useState([]);
+  const [navRightSideItems, setNavRightSideItems] = useState([]);
+
+  const [toggle, setToggle] = useState(true);
+
+  const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    setNavLeftSideItems(navItems.slice(0, 4));
+    setNavRightSideItems(navItems.slice(4, -1));
+  }, [navItems]);
+
+  const buttonToggle = () => {
+    setToggle(() => !toggle);
+  };
+
+  let currentComponent;
+  if (screenSize.width <= 600) {
+    currentComponent = <MobileNavbar data={navItems} />;
+  } else if (screenSize.width > 600 && screenSize.width <= 1300) {
+    currentComponent = (
+      <NavDropDownMenu
+        navMenus={navLeftSideItems}
+        dropDownItems={navRightSideItems}
+        toggle={toggle}
+        toggleFunc={buttonToggle}
+      />
+    );
+  } else if (screenSize.width > 1300) {
+    currentComponent = <Navbar />;
+  }
+
+  return (
+    <div className="w-full min-h-screen bg-slate-50">{currentComponent}</div>
+  );
+};
+
+export default App;
