@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="relative w-full group">
               <a
                 href="#"
-                className="flex items-center min-w-max hover:text-[#013773]"
+                className="flex items-center min-w-max hover:text-[#013773] py-2 px-1 hover:bg-[#013773]/10"
               >
                 {item.label}
                 {item.child && <BiChevronDown size={20} />}
@@ -24,7 +24,7 @@ const Navbar = () => {
               {/* ! child  */}
 
               {item.child && (
-                <div className="absolute left-0 w-full bg-white shadow-md z-10 hidden group-hover:block min-w-[12rem] max-w-max">
+                <div className="absolute left-0 w-full bg-white z-10 hidden group-hover:block min-w-[12rem] max-w-max">
                   <ul className="list-none">
                     {item.child.map((child, i) => (
                       <li
@@ -41,10 +41,13 @@ const Navbar = () => {
 
                         {/* nested child  */}
                         {child?.nChild?.length > 0 && (
-                          <div className="absolute left-full top-0 bg-white shadow-md z-10 hidden group-hover/child:block min-w-[12rem] max-w-max">
+                          <div className="absolute left-full top-0 bg-white z-10 hidden group-hover/child:block min-w-[12rem] max-w-max py-[.42rem]">
                             <ul className="list-none">
                               {child.nChild.map((nc, i) => (
-                                <li key={nc.label + i} className="mb-[.85rem]">
+                                <li
+                                  key={nc.label + i}
+                                  className="last:mb-0 mb-[.85rem]"
+                                >
                                   <a
                                     href={nc?.path}
                                     className=" px-4 py-2 text-sm text-gray-700 hover:text-[#013773] cursor-pointer"
