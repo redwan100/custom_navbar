@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { navbarItems } from "../../db";
 import { navbarItems } from "../db";
 import MobileNavbar from "./components/MobileMenu";
 import NavDropDownMenu from "./components/NavDropDownMenu";
@@ -8,7 +7,7 @@ import Navbar from "./components/Navbar";
 const App = () => {
   const [navItems, setNavItems] = useState(navbarItems);
   const [navLeftSideItems, setNavLeftSideItems] = useState([]);
-  const [navRightSideItems, setNavRightSideItems] = useState([]);
+  const [navDropdownItems, setNavDropdownItems] = useState([]);
 
   const [toggle, setToggle] = useState(true);
 
@@ -34,7 +33,7 @@ const App = () => {
 
   useEffect(() => {
     setNavLeftSideItems(navItems.slice(0, 4));
-    setNavRightSideItems(navItems.slice(4, -1));
+    setNavDropdownItems(navItems.slice(4, -1));
   }, [navItems]);
 
   const buttonToggle = () => {
@@ -43,12 +42,12 @@ const App = () => {
 
   let currentComponent;
   if (screenSize.width <= 600) {
-    currentComponent = <MobileNavbar data={navItems} />;
+    currentComponent = <MobileNavbar navbarItems={navItems} />;
   } else if (screenSize.width > 600 && screenSize.width <= 1300) {
     currentComponent = (
       <NavDropDownMenu
         navMenus={navLeftSideItems}
-        dropDownItems={navRightSideItems}
+        dropDownItems={navDropdownItems}
         toggle={toggle}
         toggleFunc={buttonToggle}
       />
@@ -58,7 +57,7 @@ const App = () => {
   }
 
   return (
-    <div className="w-full min-h-screen bg-slate-50">{currentComponent}</div>
+    <div className="w-full min-h-[400vh] bg-slate-50">{currentComponent}</div>
   );
 };
 

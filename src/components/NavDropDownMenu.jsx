@@ -3,40 +3,53 @@ import { BiChevronDown, BiChevronLeft, BiChevronRight } from "react-icons/bi";
 const NavDropDownMenu = ({ navMenus, toggleFunc, toggle, dropDownItems }) => {
   return (
     <div className="">
-      <div className="flex flex-wrap items-center justify-center gap-3 w-full bg-slate-300/40 p-3 relative container mx-auto">
+      <div className="flex flex-wrap items-center justify-center gap-2 w-full bg-white p-3 relative container mx-auto text-[14px] font-semibold">
         {navMenus.map((item) => (
           <div key={item.label}>
             {/*  navbar  */}
             <div className="relative w-full group">
-              <a href="#" className="flex items-center  min-w-max">
+              <a
+                href="#"
+                className="flex items-center min-w-max hover:text-[#013773]"
+              >
                 {item.label}
-                <BiChevronDown size={20} />
+                {item.child && <BiChevronDown size={20} />}
               </a>
 
               {/* ! child  */}
 
               {item.child && (
-                <div className="absolute left-0 w-full bg-white shadow-md z-10 hidden  group-hover:block min-w-max">
+                <div className="absolute left-0 w-full bg-white shadow-md z-10 hidden group-hover:block min-w-[12rem] max-w-max">
                   <ul className="list-none">
-                    {item.child.map((child) => (
-                      <li key={child.label} className="relative group/child">
+                    {item.child.map((child, i) => (
+                      <li
+                        key={child.label + i}
+                        className="relative group/child"
+                      >
                         <a
                           href={child.path}
-                          className=" px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between gap-1"
+                          className=" px-4 py-2 text-sm text-gray-700 hover:text-[#013773] cursor-pointer flex items-center justify-between gap-1"
                         >
-                          {child.label} <BiChevronRight size={18} />
+                          {child.label}{" "}
+                          {child?.nChild && <BiChevronRight size={18} />}
                         </a>
 
                         {/* nested child  */}
-                        {child.nChild && (
-                          <li key={child.label} className="relative">
-                            <a
-                              href={child.path}
-                              className=" px-4 py-2 text-sm text-gray-700 group-hover/child:bg-gray-100  items-center justify-between gap-1 absolute -top-8 -right-[7rem] z-[100] bg-slate-400 min-w-max hidden group-hover/child:flex"
-                            >
-                              {child.nChild.label}
-                            </a>
-                          </li>
+                        {child?.nChild?.length > 0 && (
+                          <div className="absolute left-full top-0 bg-white shadow-md z-10 hidden group-hover/child:block min-w-[12rem] max-w-max">
+                            <ul className="list-none">
+                              {child.nChild.map((nc, i) => (
+                                <li key={nc.label + i} className="mb-[.85rem]">
+                                  <a
+                                    href={nc?.path}
+                                    className=" px-4 py-2 text-sm text-gray-700 hover:text-[#013773] cursor-pointer"
+                                  >
+                                    {nc?.label}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         )}
                         {/* nested child  */}
                       </li>
@@ -64,7 +77,7 @@ const NavDropDownMenu = ({ navMenus, toggleFunc, toggle, dropDownItems }) => {
                 {/*  navbar  */}
                 <div className="relative w-full group">
                   <a href="#" className="flex items-center gap-1 min-w-max">
-                    <BiChevronDown size={20} />
+                    {item?.child && <BiChevronDown size={20} />}
                     {item.label}
                   </a>
 
@@ -86,15 +99,24 @@ const NavDropDownMenu = ({ navMenus, toggleFunc, toggle, dropDownItems }) => {
                             </a>
 
                             {/* nested child  */}
-                            {child.nChild && (
-                              <li key={child.label} className="relative">
-                                <a
-                                  href={child.path}
-                                  className=" px-4 py-2 text-sm text-gray-700 group-hover/child:bg-gray-100  items-center justify-between gap-1 absolute -top-8 -left-[7rem] z-[100] bg-slate-400 min-w-max hidden group-hover/child:flex"
-                                >
-                                  {child.nChild.label}
-                                </a>
-                              </li>
+                            {child?.nChild?.length > 0 && (
+                              <div className="absolute left-[-11rem] top-0 bg-white shadow-md z-10 hidden group-hover/child:block min-w-[12rem] max-w-max">
+                                <ul className="list-none">
+                                  {child.nChild.map((nc, i) => (
+                                    <li
+                                      key={nc.label + i}
+                                      className="mb-[.85rem]"
+                                    >
+                                      <a
+                                        href={nc?.path}
+                                        className=" px-4 py-2 text-sm text-gray-700 hover:text-[#013773] cursor-pointer"
+                                      >
+                                        {nc?.label}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
                             )}
                             {/* nested child  */}
                           </li>

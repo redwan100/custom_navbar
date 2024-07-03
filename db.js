@@ -2,36 +2,46 @@ export const navbarItems = [
   {
     label: "About Us",
     path: "/about",
-    child: [
-      {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
-      },
-      {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
-      },
-    ],
   },
   {
     label: "Conference Series",
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2022",
+          },
+          {
+            label: "batch 2023",
+          },
+          {
+            label: "batch 2024",
+          },
+        ],
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
+      },
+      {
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
       },
     ],
   },
@@ -40,52 +50,57 @@ export const navbarItems = [
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "2022",
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "2022",
       },
     ],
   },
   {
     label: "Workshops",
     path: "/",
-    child: [
-      {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
-      },
-      {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
-      },
-    ],
   },
+
   {
     label: "Committees",
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2022",
+          },
+          {
+            label: "batch 2023",
+          },
+          {
+            label: "batch 2024",
+          },
+        ],
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
+      },
+      {
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
       },
     ],
   },
@@ -94,16 +109,40 @@ export const navbarItems = [
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2022",
+          },
+          {
+            label: "batch 2023",
+          },
+          {
+            label: "batch 2024",
+          },
+        ],
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
+      },
+      {
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
       },
     ],
   },
@@ -112,34 +151,83 @@ export const navbarItems = [
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2022",
+          },
+          {
+            label: "batch 2023",
+          },
+          {
+            label: "batch 2024",
+          },
+        ],
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
+      },
+      {
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
       },
     ],
   },
+
   {
     label: "Call for Papers",
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2022",
+          },
+          {
+            label: "batch 2023",
+          },
+          {
+            label: "batch 2024",
+          },
+        ],
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
+      },
+      {
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
       },
     ],
   },
@@ -148,16 +236,40 @@ export const navbarItems = [
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2022",
+          },
+          {
+            label: "batch 2023",
+          },
+          {
+            label: "batch 2024",
+          },
+        ],
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
+      },
+      {
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
       },
     ],
   },
@@ -166,62 +278,49 @@ export const navbarItems = [
     path: "/",
     child: [
       {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2022",
+          },
+          {
+            label: "batch 2023",
+          },
+          {
+            label: "batch 2024",
+          },
+        ],
       },
       {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
+      },
+      {
+        label: "Conference 2025",
+        nChild: [
+          {
+            label: "batch 2032",
+          },
+          {
+            label: "batch 2033",
+          },
+        ],
       },
     ],
   },
   {
     label: "Team Members",
     path: "/",
-    child: [
-      {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
-      },
-      {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
-      },
-    ],
   },
   {
     label: "Contact Us",
     path: "/",
-    child: [
-      {
-        label: "team1",
-        nChild: {
-          label: "nested child 1",
-        },
-      },
-      {
-        label: "team 2",
-        nChild: {
-          label: "nested child 2",
-        },
-      },
-    ],
-  },
-  {
-    label: "Service 1",
-    path: "/service",
-    child: [
-      {
-        label: "service 1",
-      },
-    ],
   },
 ];
