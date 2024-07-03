@@ -32,9 +32,19 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    setNavLeftSideItems(navItems.slice(0, 4));
-    setNavDropdownItems(navItems.slice(4, -1));
-  }, [navItems]);
+    if (screenSize.width > 600 && screenSize.width < 800) {
+      setNavLeftSideItems(navItems.slice(0, 5));
+      setNavDropdownItems(navItems.slice(5, 12));
+    } else if (screenSize.width > 800 && screenSize.width < 1200) {
+      setNavLeftSideItems(navItems.slice(0, 6));
+      setNavDropdownItems(navItems.slice(6, 12));
+    } else if (screenSize.width > 1200 && screenSize.width < 1400) {
+      setNavLeftSideItems(navItems.slice(0, 7));
+      setNavDropdownItems(navItems.slice(7, 12));
+    } else if (screenSize.width >= 1400) {
+      setNavLeftSideItems(navItems);
+    }
+  }, [navItems, screenSize]);
 
   const buttonToggle = () => {
     setToggle(() => !toggle);
@@ -43,7 +53,7 @@ const App = () => {
   let currentComponent;
   if (screenSize.width <= 600) {
     currentComponent = <MobileNavbar navbarItems={navItems} />;
-  } else if (screenSize.width > 600 && screenSize.width <= 1300) {
+  } else if (screenSize.width > 600 && screenSize.width <= 1400) {
     currentComponent = (
       <NavDropDownMenu
         navMenus={navLeftSideItems}
@@ -52,7 +62,7 @@ const App = () => {
         toggleFunc={buttonToggle}
       />
     );
-  } else if (screenSize.width > 1300) {
+  } else if (screenSize.width > 1400) {
     currentComponent = <Navbar />;
   }
 

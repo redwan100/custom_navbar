@@ -278,40 +278,52 @@ export const navbarItems = [
     path: "/",
     child: [
       {
-        label: "Conference 2025",
-        nChild: [
-          {
-            label: "batch 2022",
-          },
-          {
-            label: "batch 2023",
-          },
-          {
-            label: "batch 2024",
-          },
-        ],
+        label: "Journal of commerce and Management (NJS)",
       },
       {
-        label: "Conference 2025",
-        nChild: [
-          {
-            label: "batch 2032",
-          },
-          {
-            label: "batch 2033",
-          },
-        ],
+        label: "Journal of commerce and Management (NJS)",
       },
       {
-        label: "Conference 2025",
-        nChild: [
-          {
-            label: "batch 2032",
-          },
-          {
-            label: "batch 2033",
-          },
-        ],
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
+      },
+      {
+        label: "Journal of commerce and Management (NJS)",
       },
     ],
   },

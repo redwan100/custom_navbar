@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="relative w-full group">
               <a
                 href="#"
-                className="flex items-center min-w-max hover:text-[#013773] py-2 px-1 hover:bg-[#013773]/10"
+                className="flex items-center min-w-max hover:text-[#013773] py-2 px-1 hover:bg-[#013773]/10 transition"
               >
                 {item.label}
                 {item.child && <BiChevronDown size={20} />}
@@ -24,8 +24,8 @@ const Navbar = () => {
               {/* ! child  */}
 
               {item.child && (
-                <div className="absolute left-0 w-full bg-white z-10 hidden group-hover:block min-w-[12rem] max-w-max">
-                  <ul className="list-none">
+                <div className="absolute left-0 w-full  z-10 hidden group-hover:block min-w-[12rem] max-w-max ">
+                  <ul className="list-none w-full min-w-max bg-white shadow-md ">
                     {item.child.map((child, i) => (
                       <li
                         key={child.label + i}
@@ -33,7 +33,7 @@ const Navbar = () => {
                       >
                         <a
                           href={child.path}
-                          className=" px-4 py-2 text-sm text-gray-700 hover:text-[#013773] cursor-pointer flex items-center justify-between gap-1"
+                          className="text-sm text-gray-700 hover:text-[#013773] cursor-pointer flex items-center justify-between gap-1 py-2 px-1 hover:bg-[#013773]/10 transition"
                         >
                           {child.label}{" "}
                           {child?.nChild && <BiChevronRight size={18} />}
@@ -41,17 +41,14 @@ const Navbar = () => {
 
                         {/* nested child  */}
                         {child?.nChild?.length > 0 && (
-                          <div className="absolute left-full top-0 bg-white z-10 hidden group-hover/child:block min-w-[12rem] max-w-max py-[.42rem]">
+                          <div className="absolute left-full top-0 bg-white z-10 hidden group-hover/child:block min-w-[12rem] max-w-max">
                             <ul className="list-none">
                               {child.nChild.map((nc, i) => (
                                 <li
                                   key={nc.label + i}
-                                  className="last:mb-0 mb-[.85rem]"
+                                  className="py-2 px-1 hover:bg-[#013773]/10 transition text-sm text-gray-700 hover:text-[#013773] cursor-pointer"
                                 >
-                                  <a
-                                    href={nc?.path}
-                                    className=" px-4 py-2 text-sm text-gray-700 hover:text-[#013773] cursor-pointer"
-                                  >
+                                  <a href={nc?.path} className=" ">
                                     {nc?.label}
                                   </a>
                                 </li>
