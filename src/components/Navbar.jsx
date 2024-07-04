@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="flex flex-wrap items-center justify-center gap-2 w-full bg-white p-3 text-[14px] font-semibold ">
+      <div className="flex flex-wrap items-center justify-center  w-full bg-white p-3 text-[14px] font-semibold ">
         {navMenus.map((item) => (
           <div key={item.label}>
             {/*  navbar  */}
