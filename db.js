@@ -313,18 +313,6 @@ export const navbarItems = [
       {
         label: "Journal of commerce and Management (NJS)",
       },
-      {
-        label: "Journal of commerce and Management (NJS)",
-      },
-      {
-        label: "Journal of commerce and Management (NJS)",
-      },
-      {
-        label: "Journal of commerce and Management (NJS)",
-      },
-      {
-        label: "Journal of commerce and Management (NJS)",
-      },
     ],
   },
   {

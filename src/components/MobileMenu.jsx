@@ -29,8 +29,8 @@ const MobileNavbar = ({ navbarItems }) => {
   };
 
   return (
-    <div>
-      <div className="container mx-auto flex justify-between items-center px-3 py-4 shadow-md fixed top-0 left-0 z-40">
+    <div className="w-full bg-white fixed top-0 left-0 z-40 right-0">
+      <div className="container mx-auto flex justify-between items-center px-3 py-4">
         <div>
           <BiBuildings size={25} cursor={"pointer"} />
         </div>
@@ -45,13 +45,13 @@ const MobileNavbar = ({ navbarItems }) => {
       </div>
 
       <nav
-        className={`bg-gray-800 text-white transition-all z-50 fixed w-full top-14 ${
+        className={`bg-gray-800 text-white transition-all z-50  w-full fixed top-14 left-0 h-full  ${
           isShowNavMenu
             ? "translate-y-0 opacity-100"
             : "-translate-y-[120%] opacity-0"
         }`}
       >
-        <div className="container mx-auto pb-4">
+        <div className="container mx-auto pb-4 h-max">
           <div className="flex justify-between items-center">
             <button className="focus:outline-none">
               <svg
