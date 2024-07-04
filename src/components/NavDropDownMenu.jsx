@@ -24,7 +24,7 @@ const NavDropDownMenu = ({ navMenus, toggleFunc, toggle, dropDownItems }) => {
               {/* ! child  */}
 
               {item.child && (
-                <div className="absolute left-0 w-full bg-white z-10 hidden group-hover:block min-w-[10rem] max-w-max">
+                <div className="absolute left-0 w-full bg-white z-10 hidden group-hover:block min-w-[11rem] max-w-max">
                   <ul className="list-none">
                     {item.child.map((child, i) => (
                       <li
