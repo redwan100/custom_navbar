@@ -51,9 +51,9 @@ const App = () => {
   };
 
   let currentComponent;
-  if (screenSize.width <= 700) {
+  if (screenSize.width <= 768) {
     currentComponent = <MobileNavbar navbarItems={navItems} />;
-  } else if (screenSize.width > 700 && screenSize.width <= 1400) {
+  } else if (screenSize.width > 768 && screenSize.width <= 1400) {
     currentComponent = (
       <NavDropDownMenu
         navMenus={navLeftSideItems}
